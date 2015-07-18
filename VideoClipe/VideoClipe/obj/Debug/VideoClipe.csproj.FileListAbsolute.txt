@@ -45,3 +45,4 @@ C:\Users\Martinelli\Documents\GitHub\VideoClipe\VideoClipe\VideoClipe\obj\Debug\
 C:\Users\Martinelli\Documents\GitHub\VideoClipe\VideoClipe\VideoClipe\obj\Debug\VideoClipe.Form1.resources
 C:\Users\Martinelli\Documents\GitHub\VideoClipe\VideoClipe\VideoClipe\obj\Debug\VideoClipe.Properties.Resources.resources
 C:\Users\Martinelli\Documents\GitHub\VideoClipe\VideoClipe\VideoClipe\obj\Debug\VideoClipe.csproj.GenerateResource.Cache
+C:\Users\Martinelli\Documents\GitHub\VideoClipe\VideoClipe\VideoClipe\obj\Debug\VideoClipe.Form2.resources

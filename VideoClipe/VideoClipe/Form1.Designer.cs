@@ -56,6 +56,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(55, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(135, 20);
@@ -184,7 +185,10 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Reprodução de vídeos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

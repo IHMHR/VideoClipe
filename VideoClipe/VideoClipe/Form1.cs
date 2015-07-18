@@ -1,22 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using MySql.Data.MySqlClient;
 using System.IO;
-using System.Windows;
 
 namespace VideoClipe
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1(int? a)
         {
             InitializeComponent();
             button5.Text = "Save";
@@ -25,10 +19,53 @@ namespace VideoClipe
             txtFormato.Visible = false;
             label3.Visible = false;
             txtNome.Visible = false;
+            if (a.HasValue)
+                Play(a.Value);
+        }
+        private void Play(int cod)
+        {
+            string name = string.Empty;
+            MySqlConnection con = new MySqlConnection("server=127.0.0.1;database=vivi;user id=root;pwd=");
+            MySqlDataReader ms;
+            MySqlCommand com = new MySqlCommand("SELECT nome FROM tbl WHERE id=" + cod, con);
+            
+            try
+            {
+                con.Open();
+                name = com.ExecuteScalar().ToString();
+            
+                com = new MySqlCommand("SELECT teste FROM tbl WHERE id=" + cod, con);
+                ms = com.ExecuteReader();
+            
+                while (ms.Read())
+                {
+                    byte[] img = ((byte[])(ms["teste"]));
+                    if (img == null)
+                    {
+                        //pictureBox1.Image = null;
+                        axWindowsMediaPlayer1.URL = null;
+                    }
+                    else
+                    {
+                        string caminho = @"C:\Users\Martinelli\Desktop\" + name + ".mp4";
+                        textBox1.Text = caminho;
+                        FileStream fs = new FileStream(caminho, FileMode.CreateNew);
+                        fs.Write(img, 0, img.Length);
+                        fs.Close();
+                        axWindowsMediaPlayer1.URL = caminho;
+                    }
+                }
+            }
+            catch(Exception ee)
+            {
+                MessageBox.Show(ee.Message.ToString());
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            txtNome.Enabled = true;
+            txtFormato.Enabled = true;
             try
             {
                 OpenFileDialog video = new OpenFileDialog();
@@ -37,6 +74,8 @@ namespace VideoClipe
                 {
                     this.textBox1.Text = video.FileName;
                 }
+
+                MessageBox.Show("Press play anytime !", "Just play it!");
             }
             catch (Exception ee)
             {
@@ -106,6 +145,9 @@ namespace VideoClipe
             label3.Visible = true;
             txtNome.Visible = true;
             txtNome.Focus();
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
         }
 
         private void txtFormato_KeyPress(object sender, KeyPressEventArgs e)
@@ -241,6 +283,7 @@ namespace VideoClipe
             if (e.KeyChar == (char)13)
                 try
                 {
+                    txtNome.Enabled = !txtNome.Enabled;
                     byte[] bt = null;
                     FileStream fs = new FileStream(this.textBox1.Text, FileMode.Open, FileAccess.Read);
                     BinaryReader br = new BinaryReader(fs);
@@ -266,8 +309,14 @@ namespace VideoClipe
                             com.Parameters.AddWithValue("@video", bt);
                             com.ExecuteNonQuery();
 
+                            /*StreamWriter sw = new StreamWriter(@"C:\Users\Martinelli\Desktop\teste.txt");
+                            foreach (var item in bt)
+                                sw.Write(item);
+                            sw.Close();*/
+
                             //MessageBox.Show("Okay \ti'm guess");
                             MessageBox.Show("Salvo !");
+                            txtNome.Clear();
                         }
                         catch (Exception eee)
                         {
@@ -279,6 +328,23 @@ namespace VideoClipe
                 {
                     MessageBox.Show(ee.Message.ToString());
                 }
+        }
+
+        private void Form1_DoubleClick(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
