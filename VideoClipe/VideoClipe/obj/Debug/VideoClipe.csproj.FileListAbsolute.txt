@@ -1,0 +1,31 @@
+c:\users\martinelli\documents\visual studio 2013\Projects\VideoClipe\VideoClipe\bin\Debug\VideoClipe.exe.config
+c:\users\martinelli\documents\visual studio 2013\Projects\VideoClipe\VideoClipe\bin\Debug\VideoClipe.exe
+c:\users\martinelli\documents\visual studio 2013\Projects\VideoClipe\VideoClipe\bin\Debug\VideoClipe.pdb
+c:\users\martinelli\documents\visual studio 2013\Projects\VideoClipe\VideoClipe\bin\Debug\Interop.WMPLib.dll
+c:\users\martinelli\documents\visual studio 2013\Projects\VideoClipe\VideoClipe\bin\Debug\AxInterop.WMPLib.dll
+c:\users\martinelli\documents\visual studio 2013\Projects\VideoClipe\VideoClipe\obj\Debug\VideoClipe.csprojResolveAssemblyReference.cache
+c:\users\martinelli\documents\visual studio 2013\Projects\VideoClipe\VideoClipe\obj\Debug\Interop.WMPLib.dll
+c:\users\martinelli\documents\visual studio 2013\Projects\VideoClipe\VideoClipe\obj\Debug\AxInterop.WMPLib.dll
+c:\users\martinelli\documents\visual studio 2013\Projects\VideoClipe\VideoClipe\obj\Debug\VideoClipe.csproj.ResolveComReference.cache
+c:\users\martinelli\documents\visual studio 2013\Projects\VideoClipe\VideoClipe\obj\Debug\VideoClipe.Form1.resources
+c:\users\martinelli\documents\visual studio 2013\Projects\VideoClipe\VideoClipe\obj\Debug\VideoClipe.Properties.Resources.resources
+c:\users\martinelli\documents\visual studio 2013\Projects\VideoClipe\VideoClipe\obj\Debug\VideoClipe.csproj.GenerateResource.Cache
+c:\users\martinelli\documents\visual studio 2013\Projects\VideoClipe\VideoClipe\obj\Debug\VideoClipe.exe
+c:\users\martinelli\documents\visual studio 2013\Projects\VideoClipe\VideoClipe\obj\Debug\VideoClipe.pdb
+C:\Users\Martinelli\Documents\Visual Studio 2013\Projects\VideoClipe\VideoClipe\obj\Debug\Interop.ShockwaveFlashObjects.dll
+H:\PC\Projects\VideoClipe\VideoClipe\bin\Debug\VideoClipe.exe.config
+H:\PC\Projects\VideoClipe\VideoClipe\obj\Debug\Interop.ShockwaveFlashObjects.dll
+H:\PC\Projects\VideoClipe\VideoClipe\obj\Debug\Interop.WMPLib.dll
+H:\PC\Projects\VideoClipe\VideoClipe\obj\Debug\AxInterop.WMPLib.dll
+H:\PC\Projects\VideoClipe\VideoClipe\obj\Debug\VideoClipe.csproj.ResolveComReference.cache
+H:\PC\Projects\VideoClipe\VideoClipe\obj\Debug\VideoClipe.exe
+H:\PC\Projects\VideoClipe\VideoClipe\obj\Debug\VideoClipe.pdb
+H:\PC\Projects\VideoClipe\VideoClipe\bin\Debug\VideoClipe.exe
+H:\PC\Projects\VideoClipe\VideoClipe\bin\Debug\VideoClipe.pdb
+H:\PC\Projects\VideoClipe\VideoClipe\bin\Debug\MySql.Data.dll
+H:\PC\Projects\VideoClipe\VideoClipe\bin\Debug\Interop.WMPLib.dll
+H:\PC\Projects\VideoClipe\VideoClipe\bin\Debug\AxInterop.WMPLib.dll
+H:\PC\Projects\VideoClipe\VideoClipe\obj\Debug\VideoClipe.csprojResolveAssemblyReference.cache
+H:\PC\Projects\VideoClipe\VideoClipe\obj\Debug\VideoClipe.Form1.resources
+H:\PC\Projects\VideoClipe\VideoClipe\obj\Debug\VideoClipe.Properties.Resources.resources
+H:\PC\Projects\VideoClipe\VideoClipe\obj\Debug\VideoClipe.csproj.GenerateResource.Cache
